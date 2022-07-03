@@ -1,8 +1,11 @@
-const ErrorHandler = (error, req, res, next) => {
-  if (error.status) return res.status(error.status).json({ message: error.message });
-  console.log(error);
-  res.status(500).json({ message: 'Sorry, something went wrong!' });
-  next();
+const ErrorHandler = (status, message) => {
+  const error = {
+    status,
+    message,
+  };
+  return error;
 };
 
-module.exports = ErrorHandler;
+module.exports = {
+  ErrorHandler,
+};

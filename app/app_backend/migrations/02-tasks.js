@@ -21,6 +21,11 @@ module.exports = {
           field: 'id',
         },
       },
+      status: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        defaultValue: 'pendant',
+      },
     });
   },
   async down(queryInterface) {

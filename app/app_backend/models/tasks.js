@@ -1,7 +1,8 @@
 const Tasks = (sequelize, DataTypes) => {
   const Task = sequelize.define('Tasks', {
     task: DataTypes.STRING,
-    employeeId: DataTypes.INTEGER,
+    employee_id: DataTypes.INTEGER,
+    status: DataTypes.STRING,
   }, {
     tableName: 'Tasks',
     underscored: true,
