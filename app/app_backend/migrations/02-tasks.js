@@ -9,6 +9,7 @@ module.exports = {
       },
       task: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       employeeId: {
         type: Sequelize.INTEGER,
