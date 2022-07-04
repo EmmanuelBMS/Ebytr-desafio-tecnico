@@ -1,16 +1,17 @@
+'use strict';
+
 const Employees = (sequelize, DataTypes) => {
-  const Task = sequelize.define('Employees', {
+  const Employee = sequelize.define('Employees', {
     full_name: DataTypes.STRING,
   }, {
     tableName: 'Employees',
     timestamps: false,
   });
 
-  return Task;
-};
-
-Employees.associate = (models) => {
-  Employees.hasOne(models.Tasks, { foreignKey: 'employeeId', as: 'employee' });
+  Employee.associate = (models) => {
+    Employee.hasMany(models.Tasks, { foreignKey: 'employeeId', as: 'task' });
+  };
+  return Employee;
 };
 
 module.exports = Employees;

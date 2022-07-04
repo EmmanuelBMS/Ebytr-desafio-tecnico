@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Tasks', {
@@ -13,6 +15,7 @@ module.exports = {
       },
       employeeId: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         field: 'employee_id',
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',

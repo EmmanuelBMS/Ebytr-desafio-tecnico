@@ -8,7 +8,6 @@ const create = (req, res, next) => {
 
 const update = (req, res, next) => {
   const { status } = req.body;
-  console.log(status);
   if (!status) return res.status(400).json({ message: 'Status is required' });
   const validStatus = /pendant|doing|done/;
   if (!status.match(validStatus)) {

@@ -4,8 +4,9 @@ const TaskValidator = require('../middlewares/TasksMiddleware');
 
 const router = express.Router();
 
-router.get('/', TaskController.getAll);
-router.post('/tasks', TaskValidator.create, TaskController.create);
-router.patch('/tasks/:id', TaskValidator.update, TaskController.update);
+router.get('/', TaskController.getAllTasks);
+router.post('/tasks', TaskValidator.create, TaskController.createTask);
+router.patch('/tasks/:id', TaskValidator.update, TaskController.updateTask);
+router.delete('/task/:id', TaskController.deleteTask);
 
 module.exports = router;

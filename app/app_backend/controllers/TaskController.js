@@ -1,8 +1,8 @@
 const TaskService = require('../services/TaskService');
 
-const getAll = async (_req, res, next) => {
+const getAllTasks = async (_req, res, next) => {
   try {
-    const task = await TaskService.getAll();
+    const task = await TaskService.getAllTasks();
 
     return res.status(200).json(task);
   } catch (error) {
@@ -10,10 +10,10 @@ const getAll = async (_req, res, next) => {
   }
 };
 
-const create = async (req, res, next) => {
+const createTask = async (req, res, next) => {
   try {
     const { task, employeeId } = req.body;
-    await TaskService.create(task, employeeId);
+    await TaskService.createTask(task, employeeId);
 
     return res.status(201).json({ message: 'Created Successfuly' });
   } catch (error) {
@@ -21,11 +21,11 @@ const create = async (req, res, next) => {
   }
 };
 
-const update = async (req, res, next) => {
+const updateTask = async (req, res, next) => {
   try {
     const { id } = req.params;
     const { status } = req.body;
-    const updated = await TaskService.update(id, status);
+    const updated = await TaskService.updateTask(id, status);
 
     return res.status(200).json(updated);
   } catch (error) {
@@ -33,8 +33,20 @@ const update = async (req, res, next) => {
   }
 };
 
+const deleteTask = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    await TaskService.deleteTask(id);
+
+    return res.status(200).json({ message: 'Deleted successfuly' });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
-  create,
-  getAll,
-  update,
+  createTask,
+  getAllTasks,
+  updateTask,
+  deleteTask,
 };
