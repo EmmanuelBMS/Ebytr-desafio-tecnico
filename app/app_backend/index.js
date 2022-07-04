@@ -7,9 +7,6 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(TaskRoute);
-
 app.use(ErrorMiddleware);
 
-app.listen(3001, () => {
-  console.log('App listening 3001');
-});
+module.exports = app;
