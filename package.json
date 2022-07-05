@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "start": "cd app/app_backend && npm run start"
+    "install:back": "cd app/app_backend && npm install",
+    "install:front": "cd app/app_frontend && npm install",
+    "start:back": "cd app/app_backend && npm run start:full",
+    "start:front": "cd app/app_frontend && npm start"
   },
   "dependencies": {
     "dotenv": "^16.0.1"

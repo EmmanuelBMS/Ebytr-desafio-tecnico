@@ -5,7 +5,6 @@ import {
   deleteTaskAPI,
   createTaskAPI,
 } from './utils/requestApi';
-import './App.css';
 
 function App() {
   const [tasks, useTasks] = useState([]);

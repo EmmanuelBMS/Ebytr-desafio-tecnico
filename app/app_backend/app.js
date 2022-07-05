@@ -1,5 +1,6 @@
 const app = require('./index');
+require('dotenv').config();
 
-app.listen(3001, () => {
-  console.log('App listening 3001');
+app.listen(process.env.BACKEND_PORT || 3001, () => {
+  console.log(`App listening ${process.env.BACKEND_PORT || 3001}`);
 });

@@ -1,7 +1,10 @@
 import Axios from 'axios';
+import dotenv from 'dotenv';
+
+dotenv().config();
 
 const api = Axios.create({
-  baseURL: 'http://localhost:3001',
+  baseURL: `http://localhost:${process.env.BACKEND_PORT || 3001}`,
 });
 
 const getTasksAPI = async (endpoint) => {
