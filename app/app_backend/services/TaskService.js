@@ -26,7 +26,7 @@ const updateTask = async (id, status) => {
 };
 
 const deleteTask = async (id) => {
-  const deleted = await TasksModel.delete({ where: { id } });
+  const deleted = await TasksModel.destroy({ where: { id } });
   if (deleted[0] === 0) throw ErrorHandler(401, 'Task not found!');
   return deleted;
 };

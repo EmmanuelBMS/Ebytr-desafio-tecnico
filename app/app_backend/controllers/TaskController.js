@@ -23,8 +23,7 @@ const createTask = async (req, res, next) => {
 
 const updateTask = async (req, res, next) => {
   try {
-    const { id } = req.params;
-    const { status } = req.body;
+    const { id, status } = req.body;
     const updated = await TaskService.updateTask(id, status);
 
     return res.status(200).json(updated);
