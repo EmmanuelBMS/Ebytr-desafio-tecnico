@@ -30,6 +30,7 @@ Frontend:
   - Reactjs
   - Biblioteca dotenv para setup de variaveis de ambiente
   - Eslint para garantir padronização de código
+  - Biblioteca  axios para fazer requisições ao backend
 
 
 Agradecimentos: 
