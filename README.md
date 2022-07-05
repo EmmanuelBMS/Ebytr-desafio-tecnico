@@ -10,7 +10,8 @@ Passo a passo para rodar o projeto em sua máquina:
 - Navegue até a pasta Ebytr-desafio-tecnico com o comando $cd Ebytr-desafio-tecnico
 - Rode o comando $npm run install:back (esse comando vai instalar as dependecias do backend)
 - Rode o comando $npm run install:front (esse comando vai instalar as dependecias do frontend)
-- Após a instalação navegue até o diretório /app/app_backend procure o arquivo .env.example preencha as variáveis de ambiente de acordo com as suas configurações, em seguida renomeie o arquivo para .env (retirando o .example);
+- Após a instalação do frontend, navegue até o diretório /app/front_end e procure pelo arquivo .env.example preencha a variável de ambiente para o porta do seu backend ( Exemplo: REACT_APP_BACKEND=3001 ). Renomeie o arquivo .env.example para .env apenas
+- Após a instalação do backend navegue até o diretório /app/app_backend procure o arquivo .env.example preencha as variáveis de ambiente de acordo com as suas configurações, em seguida renomeie o arquivo para .env (retirando o .example);
 - Em seguida rode o comando $npm run start:back
 - Após iniciar o backend, abra outra aba do seu terminal e rode o comando $npm run start:front
 - Uma guia do seu navegador padrão vai abrir direto na página da aplicação.
