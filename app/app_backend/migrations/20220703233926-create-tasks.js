@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Tasks', {
@@ -9,9 +11,11 @@ module.exports = {
       },
       task: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       employeeId: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         field: 'employee_id',
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
@@ -19,6 +23,11 @@ module.exports = {
           model: 'Employees',
           field: 'id',
         },
+      },
+      status: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        defaultValue: 'pendant',
       },
     });
   },

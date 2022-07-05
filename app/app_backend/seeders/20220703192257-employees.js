@@ -15,7 +15,6 @@ module.exports = {
         full_name: 'Lamello ball',
       },
     ],
-    {},
   ),
 
   down: async (queryInterface) => queryInterface.bulkDelete('Employees', null, {}),

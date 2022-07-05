@@ -1,19 +1,20 @@
+'use strict';
+
 const Tasks = (sequelize, DataTypes) => {
   const Task = sequelize.define('Tasks', {
-    id: DataTypes.INTEGER,
     task: DataTypes.STRING,
     employeeId: DataTypes.INTEGER,
+    status: DataTypes.STRING,
   }, {
     tableName: 'Tasks',
     underscored: true,
     timestamps: false,
   });
 
+  Task.associate = (models) => {
+    Task.belongsTo(models.Employees, { foreignKey: 'employeeId', as: 'employee' });
+  };
   return Task;
-};
-
-Tasks.associate = (models) => {
-  Tasks.belongsTo(models.Employees, { foreignKey: 'employeeId', as: 'employee' });
 };
 
 module.exports = Tasks;
