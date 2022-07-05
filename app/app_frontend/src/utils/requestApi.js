@@ -1,7 +1,7 @@
 import Axios from 'axios';
 
 const api = Axios.create({
-  baseURL: `http://localhost:${process.env.REACT_APP_PORT}`,
+  baseURL: `http://localhost:${process.env.REACT_APP_PORT || 3001}`,
 });
 
 const getTasksAPI = async (endpoint) => {
