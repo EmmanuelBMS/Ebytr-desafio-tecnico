@@ -1,7 +1,5 @@
 Projeto full stack desenvolvido por EmmanuelBMS!
 
-Para roda o projeto em seu computador:
-
 Requisitos: Node versão ^16.15.1
 
 Passo a passo para rodar o projeto em sua máquina:
