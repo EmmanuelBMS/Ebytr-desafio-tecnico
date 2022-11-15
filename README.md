@@ -32,6 +32,6 @@ Frontend:
 
 
 Agradecimentos: 
+  - Rhuanna por me acomapanhar nessa jornada nova de dev !
   - Trybe por ter nos desafiado com esse projeto
   - Família por estar sempre presente!
-  - Rhuanna por me acomapanhar nessa jornada nova de dev !
