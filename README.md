@@ -5,7 +5,7 @@ Requisitos: Node versão ^16.15.1
 Passo a passo para rodar o projeto em sua máquina:
 
 - Faça o clone do repositório com o comando $git clone git@github.com:EmmanuelBMS/Ebytr-desafio-tecnico.git
-- Navegue até a pasta Ebytr-desafio-tecnico com o comando $cd Ebytr-desafio-tecnico
+- Navegue até a pasta Ebytr-desafio-tecnico com o comando $cd Ebytr-desafio-tecnico && cd app
 - Rode o comando $npm run install:back (esse comando vai instalar as dependecias do backend)
 - Rode o comando $npm run install:front (esse comando vai instalar as dependecias do frontend)
 - Após a instalação do frontend, navegue até o diretório /app/front_end e procure pelo arquivo .env.example preencha a variável de ambiente para o porta do seu backend ( Exemplo: REACT_APP_BACKEND=3001 ). Renomeie o arquivo .env.example para .env apenas
